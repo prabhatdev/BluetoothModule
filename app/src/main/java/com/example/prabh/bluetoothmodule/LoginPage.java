@@ -17,14 +17,14 @@ import retrofit2.Response;
 
 public class LoginPage extends AppCompatActivity {
 
-    public EditText nameText,registernumberText;
+    public EditText userIdText,registernumberText;
     public CardView submit;
     public RelativeLayout relativeLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page_login);
-        nameText=(EditText)findViewById(R.id.name);
+        userIdText=(EditText)findViewById(R.id.userId);
         registernumberText=(EditText)findViewById(R.id.regNo);
         relativeLayout=(RelativeLayout)findViewById(R.id.login_page);
         submit=(CardView)findViewById(R.id.login);
@@ -39,7 +39,7 @@ public class LoginPage extends AppCompatActivity {
     void isValid()
     {
         String message = "";
-        String n=nameText.getText().toString();
+        String n=userIdText.getText().toString();
         String r=registernumberText.getText().toString();
         Call<String> call=APIservice.getService().insertdata(n,r);
         call.enqueue(new Callback<String>() {
@@ -54,7 +54,7 @@ public class LoginPage extends AppCompatActivity {
                 }
                 else
                 {
-                    snackbarMessage("Invalid entry! Please contact Wisopt Admin");
+                    snackbarMessage("Invalid entry! Please contact WisOpt Admin");
                     Handler handler=new Handler();
                     handler.postDelayed(new Runnable() {
                         @Override
