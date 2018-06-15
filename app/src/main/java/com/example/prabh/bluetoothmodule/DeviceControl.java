@@ -45,8 +45,8 @@ public class DeviceControl extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_device_control);
-        close = (CardView) findViewById(R.id.open);
-        open = (CardView) findViewById(R.id.close);
+        open = (CardView) findViewById(R.id.open);
+        close = (CardView) findViewById(R.id.close);
         disconnect = (CardView) findViewById(R.id.disconnect);
         Intent i = getIntent();
         relativeLayout = (RelativeLayout) findViewById(R.id.device_control);
@@ -58,13 +58,13 @@ public class DeviceControl extends AppCompatActivity {
         open.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openDoor();
+                closeDoor();
             }
         });
         close.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                closeDoor();
+                openDoor();
             }
         });
         disconnect.setOnClickListener(new View.OnClickListener() {
@@ -80,7 +80,7 @@ public class DeviceControl extends AppCompatActivity {
         if (bluetoothSocket != null) {
             try {
                 bluetoothSocket.getOutputStream().write("qwertyuiop".getBytes());
-                submitLog("Door Closed");
+                submitLog("Door Opened");
             } catch (IOException e) {
                 snackbarMessage("Error Occurred");
             }
@@ -91,7 +91,7 @@ public class DeviceControl extends AppCompatActivity {
         if (bluetoothSocket != null) {
             try {
                 bluetoothSocket.getOutputStream().write("poiuytrewq".getBytes());
-                submitLog("Door Opened");
+                submitLog("Door Closed");
             } catch (IOException e) {
                 snackbarMessage("Error Occurred");
             }
