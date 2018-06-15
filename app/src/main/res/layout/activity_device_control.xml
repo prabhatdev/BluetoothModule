@@ -12,82 +12,91 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="218dp"
-        android:layout_height="256dp"
+        android:layout_width="314dp"
+        android:layout_height="430dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        app:srcCompat="@drawable/wisopt1" />
+        app:srcCompat="@drawable/wisoptlogo1" />
 
     <android.support.v7.widget.CardView
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/imageView2"
-        android:layout_marginTop="50dp"
-        app:cardCornerRadius="15dp"
         android:id="@+id/open"
-        android:focusable="true"
-        app:cardBackgroundColor="#0978e8"
-        android:layout_centerHorizontal="true"
-        >
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="OPEN"
-                android:textAlignment="center"
-                android:layout_centerInParent="true"
-                android:textSize="30dp"
-                android:textColor="#e8f0e5"/>
-        </RelativeLayout>
-
-    </android.support.v7.widget.CardView>
-    <android.support.v7.widget.CardView
         android:layout_width="110dp"
         android:layout_height="40dp"
-        android:layout_below="@+id/open"
-        android:id="@+id/close"
-        android:layout_marginTop="50dp"
-        app:cardCornerRadius="15dp"
-        app:cardBackgroundColor="#0978e8"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        >
+        android:layout_marginBottom="288dp"
+        android:focusable="true"
+        app:cardBackgroundColor="#3d3e3e"
+        app:cardCornerRadius="15dp">
+
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="CLOSE"
+                android:layout_alignParentLeft="true"
+                android:drawableLeft="@drawable/lock_open"
+                android:text="OPEN"
                 android:textAlignment="center"
-                android:layout_centerInParent="true"
-                android:textSize="30dp"
-                android:textColor="#e8f0e5"/>
+                android:textColor="#e8f0e5"
+                android:textSize="30dp" />
         </RelativeLayout>
 
     </android.support.v7.widget.CardView>
+
     <android.support.v7.widget.CardView
-        android:layout_width="200dp"
+        android:id="@+id/close"
+        android:layout_width="115dp"
         android:layout_height="40dp"
-        android:layout_below="@+id/close"
-        android:id="@+id/disconnect"
-        android:layout_marginTop="50dp"
-        app:cardCornerRadius="15dp"
-        app:cardBackgroundColor="#0978e8"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        >
+        android:layout_marginBottom="176dp"
+        app:cardBackgroundColor="#3d3e3e"
+        app:cardCornerRadius="15dp">
+
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/ic_lock_outline_black_24dp"
+                android:text="CLOSE"
+                android:textAlignment="center"
+                android:textColor="#e8f0e5"
+                android:textSize="30dp" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/disconnect"
+        android:layout_width="210dp"
+
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="62dp"
+        app:cardBackgroundColor="#3d3e3e"
+        app:cardCornerRadius="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/ic_bluetooth_disabled_black_24dp"
                 android:text="DISCONNECT"
                 android:textAlignment="center"
-                android:layout_centerInParent="true"
-                android:textSize="30dp"
-                android:textColor="#e8f0e5"/>
+                android:textColor="#e8f0e5"
+                android:textSize="30dp" />
         </RelativeLayout>
 
     </android.support.v7.widget.CardView>

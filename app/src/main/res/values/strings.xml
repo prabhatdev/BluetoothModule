@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">BluetoothModule</string>
+    <string name="app_name">WisOpt Lock</string>
+    <string name="background">#242222</string>
 </resources>
